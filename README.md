@@ -1,78 +1,62 @@
-# UNICLIMA METRICS
+# UNICLIMA METRICS (PROYECTO_PR_BD_PE)
 
 ## Nombre del proyecto
 **UNICLIMA METRICS**
 
-Sistema IoT de monitoreo climático local para el campus de la Universidad Privada Franz Tamayo (UNIFRANZ).
+Sistema IoT de monitoreo meteorologico local, analisis estadistico y pronostico para el campus de la Universidad Privada Franz Tamayo (UNIFRANZ).
 
 ## Problema
-Las aplicaciones meteorológicas convencionales pueden presentar datos poco precisos para una ubicación específica cuando utilizan información proveniente de estaciones o satélites alejados.
+Las aplicaciones meteorologicas convencionales pueden presentar datos poco precisos para una ubicacion especifica cuando utilizan informacion proveniente de estaciones o satelites alejados.
 
-En el campus de UNIFRANZ existe la necesidad de contar con mediciones climáticas locales de temperatura, humedad, presión barométrica, precipitación y radiación UV, además de información histórica y alertas.
+En el campus de UNIFRANZ existe la necesidad de contar con mediciones climaticas locales de temperatura, humedad, presion barometrica, precipitacion y radiacion UV, ademas de informacion historica y alertas.
 
-## Propósito
-Desarrollar una estación meteorológica IoT de bajo costo que permita obtener información climática directamente del entorno del campus de UNIFRANZ, almacenar los datos y presentarlos de forma clara para facilitar su consulta, análisis y uso didáctico.
+## Proposito
+Desarrollar una estacion meteorologica IoT de bajo costo que permita obtener informacion climatica directamente del entorno del campus de UNIFRANZ, almacenar los datos y presentarlos de forma clara para facilitar su consulta, analisis y uso didactico.
 
 ## Usuarios
-- **Administrador:** administración de estaciones y funciones administrativas.
-- **Investigador / Usuario de Consulta:** consulta de información climática e histórica.
-- **Personal y estudiantes del campus:** visualización de las condiciones climáticas locales.
+- Administrador: administracion de estaciones, usuarios y funciones administrativas.
+- Investigador / Usuario de Consulta: consulta de informacion climatica, historica, estadistica y reportes.
+- Personal y estudiantes del campus: visualizacion de las condiciones climaticas locales y pronosticos.
 
 ## Objetivo
-Implementar una estación meteorológica IoT automatizada basada en hardware y un ESP32 para recopilar datos climáticos locales, almacenarlos en SQL Server, generar análisis y alertas mediante reglas definidas en el proyecto y presentar los resultados mediante una interfaz amigable.
+Implementar una estacion meteorologica IoT automatizada basada en hardware y un ESP32 para recopilar datos climaticos locales, almacenarlos en SQL Server, generar analisis, pronosticos y alertas mediante reglas y modelos del proyecto, y presentar los resultados mediante una aplicacion de escritorio en C# Windows Forms.
 
-## Descripción general
-UNICLIMA METRICS contempla una estación meteorológica de bajo costo construida alrededor de un ESP32.
+## Descripcion general
+UNICLIMA METRICS contempla una estacion meteorologica de bajo costo construida alrededor de un ESP32 con sensores ambientales (temperatura, humedad, presion, precipitacion y radiacion UV), comunicacion via Wi-Fi / HTTP y persistencia en SQL Server.
 
-- **BMP280:** temperatura y presión barométrica.
-- **DHT11:** humedad relativa.
-- **FC-37:** detección de precipitación.
-- **Sensor UV:** medición de radiación ultravioleta.
-- Comunicación mediante **Wi-Fi y HTTP** dentro de la red de la universidad.
-- Persistencia de datos en **SQL Server**.
+### Funcionalidades implementadas
+- Monitoreo por estacion (Form1Principal): Visualizacion de temperatura ambiente actual, humedad, condicion climatica, valores maximos y minimos del dia y pronostico de proximas horas.
+- Metricas historicas y analisis estadistico (Form4Metricas): Graficas dinamicas con LiveCharts2 y resumenes estadisticos y probabilisticos (rango habitual promedio +- desviacion estandar, promedio muestral, minimos/maximos y probabilidad empirica de superar umbrales como calor >= 28 C y humedad >= 70%).
+- Pronostico de series de tiempo (CN_Pronostico): Prediccion de temperatura y humedad mediante ML.NET (ForecastBySsa).
+- Reportes y gestion (Form9Reportes, Form11MiPerfil): Modulo de reportes RDLC conectados a SQL Server, gestion de perfil y administracion del sistema.
 
-El sistema contempla visualización dinámica mediante indicadores tipo semáforo, alertas de UV, cálculo aproximado del tiempo seguro de exposición solar, detección de posibles condiciones de tormenta o frente frío mediante variaciones de presión, cálculo de un índice acumulativo de sequía, administración de estaciones, consulta histórica y reportes en PDF y Excel.
+## Tecnologias utilizadas
+- Lenguaje y framework: C#, Windows Forms (.NET) en arquitectura por capas.
+- Base de datos: Microsoft SQL Server.
+- Machine Learning y graficos: ML.NET (TimeSeries), LiveCharts2 / SkiaSharp.
+- Reportes y hardware: RDLC y estaciones con ESP32 / sensores ambientales.
 
 ## Integrantes
-- **Camila Raquel Choque Peñafiel** — Grupo: UNNICLIMA METRICS — Rol: pendiente de definir.
-- **José Carlos Trujillo Soliz** — Grupo: Paralelo 3 — Rol: pendiente de definir.
+- Camila Raquel Choque Penafiel - Grupo: UNICLIMA METRICS.
+- Jose Carlos Trujillo Soliz - Grupo: Paralelo 3.
 
-> Los roles se mantienen como pendientes porque el informe proporcionado no especifica las responsabilidades individuales.
+## Estado actual y avance
+Avance funcional cercano al 80% del proyecto: aplicacion de escritorio en C# Windows Forms conectada a SQL Server, visualizacion por estacion, graficas historicas, resumen estadistico y probabilistico en Form4Metricas, modulo de pronostico con ML.NET, reportes RDLC y evidencias del sistema. Quedan pendientes ampliaciones estadisticas avanzadas y ajustes finales de integracion y pulido.
 
-## Estado actual
-**Hito 2 — Definición y alcance.**
+## Organizacion del repositorio
+- src/: codigo fuente de la aplicacion y componentes del proyecto.
+- database/: scripts y estructura de base de datos.
+- docs/ y Evidencias/: documentacion y capturas de pantalla del funcionamiento del sistema.
+- resources/, tests/, EQUIPO/ y .github/: recursos, pruebas, informacion del equipo y configuracion del repositorio.
 
-Actualmente se han establecido la problemática, objetivos, requisitos funcionales y no funcionales, alcance, limitaciones, historias de usuario, metodología Scrum, selección inicial de sensores y hardware, arquitectura general de comunicación, uso de SQL Server y los hitos de desarrollo.
+## Metodologia
+El proyecto utiliza Scrum, contemplando refinamiento, planificacion de Sprint, construccion, revision y retrospectiva.
 
-### Próximos hitos
-- **Hito 3:** primer prototipo funcional, base de datos física, conexión del ESP32 con sensores y primera visualización.
-- **Hito 4:** sistema al 90%, algoritmos de sequía y detección barométrica, panel administrativo y UML consolidado.
-- **Hito 5:** sistema final al 100%, pruebas de integración, correcciones, documentación final y defensa.
+## Instrucciones de ejecucion
+1. Clonar el repositorio publico desde GitHub.
+2. Configurar la base de datos en SQL Server y verificar la cadena de conexion en la capa de datos (CapaDatos/Conexion.cs).
+3. Abrir la solucion del proyecto en Visual Studio.
+4. Restaurar paquetes NuGet si es necesario y ejecutar la aplicacion (F5).
 
-## Organización del repositorio
-
-```text
-PEP2-2026-PROYECTO/
-├── README.md
-├── docs/
-├── src/
-├── database/
-├── tests/
-├── resources/
-├── EQUIPO/
-└── .github/
-```
-
-## Metodología
-El proyecto utiliza **Scrum**, contemplando refinamiento, planificación de Sprint, construcción, revisión y retrospectiva.
-
-## Alcance
-El proyecto está orientado al monitoreo climático dentro de las áreas del campus de UNIFRANZ y contempla un prototipo universitario de bajo costo.
-
-No se contempla en la fase actual:
-- Modelos de predicción mediante redes neuronales o aprendizaje automático complejo.
-- Una carcasa meteorológica industrial.
-- Aplicaciones nativas para Android o iOS.
-- Pronósticos fuera de las áreas del campus de UNIFRANZ.
-
-> **Nota:** el informe menciona tanto una aplicación web como Windows Forms/C#. Esta definición tecnológica deberá aclararse antes de implementar la estructura definitiva de la aplicación.
+## Evidencias del funcionamiento
+Las capturas de pantalla del sistema en ejecucion se encuentran en la carpeta Evidencias/ (y/o documentacion del repositorio).

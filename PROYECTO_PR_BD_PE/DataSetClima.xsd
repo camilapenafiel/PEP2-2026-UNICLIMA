@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSetClima" targetNamespace="http://tempuri.org/DataSetClima.xsd" xmlns:mstns="http://tempuri.org/DataSetClima.xsd" xmlns="http://tempuri.org/DataSetClima.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSetClima" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="DataSetClima" msprop:Generator_DataSetName="DataSetClima">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Lecturas" msprop:Generator_RowEvHandlerName="LecturasRowChangeEventHandler" msprop:Generator_RowDeletedName="LecturasRowDeleted" msprop:Generator_RowDeletingName="LecturasRowDeleting" msprop:Generator_RowEvArgName="LecturasRowChangeEvent" msprop:Generator_TablePropName="Lecturas" msprop:Generator_RowChangedName="LecturasRowChanged" msprop:Generator_RowChangingName="LecturasRowChanging" msprop:Generator_TableClassName="LecturasDataTable" msprop:Generator_RowClassName="LecturasRow" msprop:Generator_TableVarName="tableLecturas" msprop:Generator_UserTableName="Lecturas">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Fecha" msprop:Generator_ColumnPropNameInRow="Fecha" msprop:Generator_ColumnPropNameInTable="FechaColumn" msprop:Generator_ColumnVarNameInTable="columnFecha" msprop:Generator_UserColumnName="Fecha" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="TempPromedio" msprop:Generator_ColumnPropNameInRow="TempPromedio" msprop:Generator_ColumnPropNameInTable="TempPromedioColumn" msprop:Generator_ColumnVarNameInTable="columnTempPromedio" msprop:Generator_UserColumnName="TempPromedio" type="xs:string" minOccurs="0" />
+              <xs:element name="HumedadPromedio" msprop:Generator_ColumnPropNameInRow="HumedadPromedio" msprop:Generator_ColumnPropNameInTable="HumedadPromedioColumn" msprop:Generator_ColumnVarNameInTable="columnHumedadPromedio" msprop:Generator_UserColumnName="HumedadPromedio" type="xs:string" minOccurs="0" />
+              <xs:element name="DiasSoleados" msprop:Generator_ColumnPropNameInRow="DiasSoleados" msprop:Generator_ColumnPropNameInTable="DiasSoleadosColumn" msprop:Generator_ColumnVarNameInTable="columnDiasSoleados" msprop:Generator_UserColumnName="DiasSoleados" type="xs:string" minOccurs="0" />
+              <xs:element name="DIasLluvia" msprop:Generator_ColumnPropNameInRow="DIasLluvia" msprop:Generator_ColumnPropNameInTable="DIasLluviaColumn" msprop:Generator_ColumnVarNameInTable="columnDIasLluvia" msprop:Generator_UserColumnName="DIasLluvia" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ComparativoEstaciones" msprop:Generator_RowEvHandlerName="ComparativoEstacionesRowChangeEventHandler" msprop:Generator_RowDeletedName="ComparativoEstacionesRowDeleted" msprop:Generator_RowDeletingName="ComparativoEstacionesRowDeleting" msprop:Generator_RowEvArgName="ComparativoEstacionesRowChangeEvent" msprop:Generator_TablePropName="ComparativoEstaciones" msprop:Generator_RowChangedName="ComparativoEstacionesRowChanged" msprop:Generator_RowChangingName="ComparativoEstacionesRowChanging" msprop:Generator_TableClassName="ComparativoEstacionesDataTable" msprop:Generator_RowClassName="ComparativoEstacionesRow" msprop:Generator_TableVarName="tableComparativoEstaciones" msprop:Generator_UserTableName="ComparativoEstaciones">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NombreEstacion" msprop:Generator_ColumnPropNameInRow="NombreEstacion" msprop:Generator_ColumnPropNameInTable="NombreEstacionColumn" msprop:Generator_ColumnVarNameInTable="columnNombreEstacion" msprop:Generator_UserColumnName="NombreEstacion" type="xs:string" minOccurs="0" />
+              <xs:element name="TempMaxima" msprop:Generator_ColumnPropNameInRow="TempMaxima" msprop:Generator_ColumnPropNameInTable="TempMaximaColumn" msprop:Generator_ColumnVarNameInTable="columnTempMaxima" msprop:Generator_UserColumnName="TempMaxima" type="xs:string" minOccurs="0" />
+              <xs:element name="TempMinima" msprop:Generator_ColumnPropNameInRow="TempMinima" msprop:Generator_ColumnPropNameInTable="TempMinimaColumn" msprop:Generator_ColumnVarNameInTable="columnTempMinima" msprop:Generator_UserColumnName="TempMinima" type="xs:string" minOccurs="0" />
+              <xs:element name="LluviaTotal" msprop:Generator_ColumnPropNameInRow="LluviaTotal" msprop:Generator_ColumnPropNameInTable="LluviaTotalColumn" msprop:Generator_ColumnVarNameInTable="columnLluviaTotal" msprop:Generator_UserColumnName="LluviaTotal" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="AlertasClima" msprop:Generator_RowEvHandlerName="AlertasClimaRowChangeEventHandler" msprop:Generator_RowDeletedName="AlertasClimaRowDeleted" msprop:Generator_RowDeletingName="AlertasClimaRowDeleting" msprop:Generator_RowEvArgName="AlertasClimaRowChangeEvent" msprop:Generator_TablePropName="AlertasClima" msprop:Generator_RowChangedName="AlertasClimaRowChanged" msprop:Generator_RowChangingName="AlertasClimaRowChanging" msprop:Generator_TableClassName="AlertasClimaDataTable" msprop:Generator_RowClassName="AlertasClimaRow" msprop:Generator_TableVarName="tableAlertasClima" msprop:Generator_UserTableName="AlertasClima">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FechaAlerta" msprop:Generator_ColumnPropNameInRow="FechaAlerta" msprop:Generator_ColumnPropNameInTable="FechaAlertaColumn" msprop:Generator_ColumnVarNameInTable="columnFechaAlerta" msprop:Generator_UserColumnName="FechaAlerta" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Estacion" msprop:Generator_ColumnPropNameInRow="Estacion" msprop:Generator_ColumnPropNameInTable="EstacionColumn" msprop:Generator_ColumnVarNameInTable="columnEstacion" msprop:Generator_UserColumnName="Estacion" type="xs:string" minOccurs="0" />
+              <xs:element name="TipoAlerta" msprop:Generator_ColumnPropNameInRow="TipoAlerta" msprop:Generator_ColumnPropNameInTable="TipoAlertaColumn" msprop:Generator_ColumnVarNameInTable="columnTipoAlerta" msprop:Generator_UserColumnName="TipoAlerta" type="xs:string" minOccurs="0" />
+              <xs:element name="ValorCritico" msprop:Generator_ColumnPropNameInRow="ValorCritico" msprop:Generator_ColumnPropNameInTable="ValorCriticoColumn" msprop:Generator_ColumnVarNameInTable="columnValorCritico" msprop:Generator_UserColumnName="ValorCritico" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TendenciasMensuales" msprop:Generator_RowEvHandlerName="TendenciasMensualesRowChangeEventHandler" msprop:Generator_RowDeletedName="TendenciasMensualesRowDeleted" msprop:Generator_RowDeletingName="TendenciasMensualesRowDeleting" msprop:Generator_RowEvArgName="TendenciasMensualesRowChangeEvent" msprop:Generator_TablePropName="TendenciasMensuales" msprop:Generator_RowChangedName="TendenciasMensualesRowChanged" msprop:Generator_RowChangingName="TendenciasMensualesRowChanging" msprop:Generator_TableClassName="TendenciasMensualesDataTable" msprop:Generator_RowClassName="TendenciasMensualesRow" msprop:Generator_TableVarName="tableTendenciasMensuales" msprop:Generator_UserTableName="TendenciasMensuales">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Mes" msprop:Generator_ColumnPropNameInRow="Mes" msprop:Generator_ColumnPropNameInTable="MesColumn" msprop:Generator_ColumnVarNameInTable="columnMes" msprop:Generator_UserColumnName="Mes" type="xs:string" minOccurs="0" />
+              <xs:element name="Año" msprop:Generator_ColumnPropNameInRow="Año" msprop:Generator_ColumnPropNameInTable="AñoColumn" msprop:Generator_ColumnVarNameInTable="columnAño" msprop:Generator_UserColumnName="Año" type="xs:string" minOccurs="0" />
+              <xs:element name="TempPromedioMensual" msprop:Generator_ColumnPropNameInRow="TempPromedioMensual" msprop:Generator_ColumnPropNameInTable="TempPromedioMensualColumn" msprop:Generator_ColumnVarNameInTable="columnTempPromedioMensual" msprop:Generator_UserColumnName="TempPromedioMensual" type="xs:string" minOccurs="0" />
+              <xs:element name="TotalPrecipitacion" msprop:Generator_ColumnPropNameInRow="TotalPrecipitacion" msprop:Generator_ColumnPropNameInTable="TotalPrecipitacionColumn" msprop:Generator_ColumnVarNameInTable="columnTotalPrecipitacion" msprop:Generator_UserColumnName="TotalPrecipitacion" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="MantenimientoIoT" msprop:Generator_RowEvHandlerName="MantenimientoIoTRowChangeEventHandler" msprop:Generator_RowDeletedName="MantenimientoIoTRowDeleted" msprop:Generator_RowDeletingName="MantenimientoIoTRowDeleting" msprop:Generator_RowEvArgName="MantenimientoIoTRowChangeEvent" msprop:Generator_TablePropName="MantenimientoIoT" msprop:Generator_RowChangedName="MantenimientoIoTRowChanged" msprop:Generator_RowChangingName="MantenimientoIoTRowChanging" msprop:Generator_TableClassName="MantenimientoIoTDataTable" msprop:Generator_RowClassName="MantenimientoIoTRow" msprop:Generator_TableVarName="tableMantenimientoIoT" msprop:Generator_UserTableName="MantenimientoIoT">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Estacion" msprop:Generator_ColumnPropNameInRow="Estacion" msprop:Generator_ColumnPropNameInTable="EstacionColumn" msprop:Generator_ColumnVarNameInTable="columnEstacion" msprop:Generator_UserColumnName="Estacion" type="xs:string" minOccurs="0" />
+              <xs:element name="UltimaConexion" msprop:Generator_ColumnPropNameInRow="UltimaConexion" msprop:Generator_ColumnPropNameInTable="UltimaConexionColumn" msprop:Generator_ColumnVarNameInTable="columnUltimaConexion" msprop:Generator_UserColumnName="UltimaConexion" type="xs:string" minOccurs="0" />
+              <xs:element name="EstadoSensores" msprop:Generator_ColumnPropNameInRow="EstadoSensores" msprop:Generator_ColumnPropNameInTable="EstadoSensoresColumn" msprop:Generator_ColumnVarNameInTable="columnEstadoSensores" msprop:Generator_UserColumnName="EstadoSensores" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
