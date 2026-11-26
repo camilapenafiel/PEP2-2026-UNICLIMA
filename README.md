@@ -63,4 +63,4 @@ El proyecto utiliza Scrum, contemplando refinamiento, planificacion de Sprint, c
 4. Restaurar paquetes NuGet si es necesario y ejecutar la aplicacion (F5).
 
 ## Evidencias del funcionamiento
-Las capturas de pantalla del sistema en ejecucion se encuentran en la carpeta Evidencias/ (y/o documentacion del repositorio).
+Las capturas de pantalla del sistema en ejecución se encuentran en [Evidencias](Evidencias/README.md), donde están organizadas y descritas por módulo.
