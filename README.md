@@ -30,6 +30,10 @@ UNICLIMA METRICS contempla una estacion meteorologica de bajo costo construida a
 - Pronostico de series de tiempo (CN_Pronostico): Prediccion de temperatura y humedad mediante ML.NET (ForecastBySsa).
 - Reportes y gestion (Form9Reportes, Form11MiPerfil): Modulo de reportes RDLC conectados a SQL Server, gestion de perfil y administracion del sistema.
 
+## Documentación de Probabilidad y Estadística
+
+El componente estadístico del sistema se documenta en [Aplicación de Probabilidad y Estadística](docs/probabilidad-estadistica.md). Incluye el tipo de estudio, población y muestra operativa, fuente de datos, medidas descriptivas, cálculo de frecuencias empíricas, pronóstico de series temporales y alcance de la implementación actual.
+
 ## Tecnologias utilizadas
 - Lenguaje y framework: C#, Windows Forms (.NET) en arquitectura por capas.
 - Base de datos: Microsoft SQL Server.
